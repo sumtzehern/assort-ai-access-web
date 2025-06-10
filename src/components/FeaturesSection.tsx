@@ -5,88 +5,67 @@ import { Clock, Users, Calendar, Heart, Search, Mail, Plus, CheckCircle, ArrowUp
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: '24/7 Appointment Management',
-      description: 'Round-the-clock scheduling, rescheduling, and cancellation handling'
+      icon: <Clock className="w-5 h-5" />,
+      title: '24/7 Appointment Management'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Switchboard: Provider Triage, Routing & FAQ',
-      description: 'Intelligent call routing and instant answers to common questions'
+      icon: <Users className="w-5 h-5" />,
+      title: 'Switchboard: Provider Triage'
     },
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: 'Patient Case Creation',
-      description: 'Automated case documentation and medical history capture'
+      icon: <Heart className="w-5 h-5" />,
+      title: 'Patient Case Creation'
     },
     {
-      icon: <Calendar className="w-8 h-8" />,
-      title: 'Fill Cancellations & Send Follow-ups',
-      description: 'Proactive scheduling optimization and patient engagement'
+      icon: <Calendar className="w-5 h-5" />,
+      title: 'Fill Cancellations'
     },
     {
-      icon: <Search className="w-8 h-8" />,
-      title: 'Prescription Refills',
-      description: 'Streamlined medication renewal process with pharmacy coordination'
+      icon: <Search className="w-5 h-5" />,
+      title: 'Prescription Refills'
     },
     {
-      icon: <Mail className="w-8 h-8" />,
-      title: 'SMS Recovery',
-      description: 'Automated text messaging for appointment reminders and health tips'
+      icon: <Mail className="w-5 h-5" />,
+      title: 'SMS Recovery'
     },
     {
-      icon: <Plus className="w-8 h-8" />,
-      title: 'Self Scheduling',
-      description: 'Patient-initiated appointment booking with real-time availability'
+      icon: <Plus className="w-5 h-5" />,
+      title: 'Self Scheduling'
     },
     {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Multilingual Support',
-      description: 'Native language support for diverse patient populations'
+      icon: <CheckCircle className="w-5 h-5" />,
+      title: 'Multilingual Support'
     },
     {
-      icon: <ArrowUp className="w-8 h-8" />,
-      title: 'Bespoke Workflow Automation',
-      description: 'Custom AI workflows tailored to your practice needs'
+      icon: <ArrowUp className="w-5 h-5" />,
+      title: 'Bespoke Workflow'
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-healthcare-blue/5">
+    <section className="py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-[#1C315B] mb-2">
             Patient access automation across all channels
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI solutions that handle every aspect of patient communication and practice management.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-3">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="glass glass-hover rounded-xl p-4 text-center transition-all duration-300 hover:scale-105"
+              style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="text-healthcare-blue group-hover:text-healthcare-blue-dark transition-colors mb-6">
+              <div className="text-[#1C315B] mb-2 flex justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-healthcare-blue transition-colors">
+              <h3 className="text-sm font-medium text-[#1C315B]">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-16">
-          <button className="bg-healthcare-blue text-white px-10 py-4 rounded-lg hover:bg-healthcare-blue-dark transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-            Explore All Features
-          </button>
         </div>
       </div>
     </section>

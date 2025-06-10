@@ -2,13 +2,12 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import StatsSection from '@/components/StatsSection';
 import RoverSection from '@/components/RoverSection';
 import SpecialtiesSection from '@/components/SpecialtiesSection';
+import StatsSection from '@/components/StatsSection';
 import FeaturesSection from '@/components/FeaturesSection';
-import DemoSection from '@/components/DemoSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
 import IntegrationsSection from '@/components/IntegrationsSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -16,13 +15,12 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <StatsSection />
       <RoverSection />
       <SpecialtiesSection />
+      <StatsSection />
       <FeaturesSection />
-      <DemoSection />
-      <TestimonialsSection />
       <IntegrationsSection />
+      <TestimonialsSection />
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ const StatsSection = () => {
   const [goLive, setGoLive] = useState(0);
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
     const steps = 60;
     const interval = duration / steps;
 
@@ -38,52 +38,43 @@ const StatsSection = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-healthcare-blue/5 to-healthcare-blue-light/5">
+    <section className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Proven Results Across Healthcare
-          </h2>
-          <p className="text-xl text-gray-600">
-            Real impact from millions of patient interactions
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Patient Interactions */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
-            <div className="text-4xl font-bold text-healthcare-blue mb-2">
+          <div className="glass rounded-xl p-4 text-center hover:scale-105 transition-all duration-300">
+            <div className="text-2xl font-bold text-[#1C315B] mb-1">
               {patientInteractions.toLocaleString()}
             </div>
-            <div className="text-gray-600 text-lg">Patient Interactions</div>
-            <div className="text-sm text-gray-500 mt-2">with Assort's Voice AI</div>
+            <div className="text-gray-600 text-sm">Patient Interactions</div>
+            <div className="text-xs text-gray-500 mt-1">with Assort's Voice AI</div>
           </div>
 
           {/* Net New Patients */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
-            <div className="text-4xl font-bold text-healthcare-accent mb-2">
+          <div className="glass rounded-xl p-4 text-center hover:scale-105 transition-all duration-300">
+            <div className="text-2xl font-bold text-green-600 mb-1">
               +{newPatients}%
             </div>
-            <div className="text-gray-600 text-lg">Net New Patients</div>
-            <div className="text-sm text-gray-500 mt-2">average increase</div>
+            <div className="text-gray-600 text-sm">Net New Patients</div>
+            <div className="text-xs text-gray-500 mt-1">average increase</div>
           </div>
 
           {/* Operational Costs */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
-            <div className="text-4xl font-bold text-healthcare-blue mb-2">
+          <div className="glass rounded-xl p-4 text-center hover:scale-105 transition-all duration-300">
+            <div className="text-2xl font-bold text-[#1C315B] mb-1">
               -{operationalCosts}%
             </div>
-            <div className="text-gray-600 text-lg">Operational Costs</div>
-            <div className="text-sm text-gray-500 mt-2">reduction achieved</div>
+            <div className="text-gray-600 text-sm">Operational Costs</div>
+            <div className="text-xs text-gray-500 mt-1">reduction achieved</div>
           </div>
 
           {/* Go Live */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300">
-            <div className="text-4xl font-bold text-healthcare-warning mb-2">
+          <div className="glass rounded-xl p-4 text-center hover:scale-105 transition-all duration-300">
+            <div className="text-2xl font-bold text-orange-500 mb-1">
               {goLive} weeks
             </div>
-            <div className="text-gray-600 text-lg">Go Live</div>
-            <div className="text-sm text-gray-500 mt-2">implementation time</div>
+            <div className="text-gray-600 text-sm">Go Live</div>
+            <div className="text-xs text-gray-500 mt-1">implementation time</div>
           </div>
         </div>
       </div>

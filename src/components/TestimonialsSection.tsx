@@ -6,67 +6,41 @@ const TestimonialsSection = () => {
     {
       quote: "Assort Health's AI has been a game-changer for our practice—patient communication has never been smoother.",
       author: "Dr. William Chen",
-      title: "Dermatology",
-      avatar: "👨‍⚕️"
+      title: "Dermatology"
     },
     {
       quote: "Our patients love the 24/7 availability and our staff appreciates the reduced call volume during peak hours.",
       author: "Dr. Sarah Johnson",
-      title: "Family Medicine",
-      avatar: "👩‍⚕️"
+      title: "Family Medicine"
     },
     {
-      quote: "The specialty-specific training really shows. The AI understands our cardiology terminology and protocols perfectly.",
+      quote: "The specialty-specific training really shows. The AI understands our cardiology terminology perfectly.",
       author: "Dr. Michael Rodriguez",
-      title: "Cardiology",
-      avatar: "👨‍⚕️"
-    },
-    {
-      quote: "Implementation was seamless and patient satisfaction scores have increased significantly since we went live.",
-      author: "Dr. Emily Thompson",
-      title: "Pediatrics",
-      avatar: "👩‍⚕️"
-    },
-    {
-      quote: "The multilingual support has been crucial for our diverse patient population. Truly impressive technology.",
-      author: "Dr. David Kim",
-      title: "Orthopedics",
-      avatar: "👨‍⚕️"
+      title: "Cardiology"
     }
   ];
 
   return (
-    <section className="py-20 bg-healthcare-gradient">
+    <section className="py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            What healthcare professionals say
-          </h2>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            Trusted by thousands of healthcare providers nationwide
-          </p>
-        </div>
-
-        <div className="overflow-x-auto pb-6">
-          <div className="flex space-x-6 w-max">
+        <div className="overflow-x-auto">
+          <div className="flex space-x-4 w-max">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 w-96 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+                className="glass rounded-xl p-4 w-80 hover:scale-105 transition-all duration-300"
               >
-                <div className="text-4xl mb-6">"</div>
-                <p className="text-white text-lg leading-relaxed mb-8">
+                <div className="text-lg mb-3">"</div>
+                <p className="text-[#1C315B] text-sm leading-relaxed mb-4">
                   {testimonial.quote}
                 </p>
                 <div className="flex items-center">
-                  <div className="text-3xl mr-4">
-                    {testimonial.avatar}
-                  </div>
+                  <div className="text-lg mr-3">👨‍⚕️</div>
                   <div>
-                    <div className="text-white font-semibold text-lg">
+                    <div className="text-[#1C315B] font-semibold text-sm">
                       {testimonial.author}
                     </div>
-                    <div className="text-white/70">
+                    <div className="text-gray-600 text-xs">
                       {testimonial.title}
                     </div>
                   </div>
